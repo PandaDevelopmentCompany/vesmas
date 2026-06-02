@@ -1794,7 +1794,7 @@ ul {
 
 .service-item span {
     color: #334155;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .service-item b {
@@ -1831,6 +1831,10 @@ ul {
 
     .service-item span {
         max-width: 65%;
+        font-size: 12px;
     }
 
+    .service-item b {
+        font-size: 14px;
+    }
 }
