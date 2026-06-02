@@ -500,6 +500,11 @@ ul {
 .hero {
     padding: 140px 0 100px;
 }
+@media screen and (max-width: 600px) {
+    .hero {
+        padding-bottom: 10px;
+    }
+}
 
 .hero-grid {
     display: grid;
