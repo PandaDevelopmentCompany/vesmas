@@ -1257,3 +1257,90 @@ ul {
         display: flex;
     }
 }
+
+
+/* =========================
+   LEGAL MODAL (CLEAN UI)
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 9999;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+}
+
+.modal__content {
+    position: relative;
+    width: 92%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: modalPop 0.2s ease;
+}
+
+@keyframes modalPop {
+    from {
+        transform: scale(0.96);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.modal__header h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal__close {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal__body a {
+    display: block;
+    padding: 12px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    color: #0f766e;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.modal__body a:hover {
+    background: #e2e8f0;
+}

@@ -133,3 +133,46 @@ window.addEventListener('scroll', () => {
     }
 
 });
+
+
+
+// =========================
+// LEGAL MODAL (SAFE VERSION)
+// =========================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const openLegal = document.getElementById('openLegal');
+    const legalModal = document.getElementById('legalModal');
+    const closeLegal = document.getElementById('closeLegal');
+
+    if (!openLegal || !legalModal || !closeLegal) return;
+
+    const open = () => {
+        legalModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+        legalModal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    openLegal.addEventListener('click', (e) => {
+        e.preventDefault();
+        open();
+    });
+
+    closeLegal.addEventListener('click', close);
+
+    legalModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal__overlay')) {
+            close();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    });
+
+});

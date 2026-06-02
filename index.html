@@ -579,7 +579,10 @@ vesmas01@yandex.ru
 
 <a href="#">Политика конфиденциальности</a>
 <a href="#">Пользовательское соглашение</a>
-<a href="#">Правовая информация</a>
+
+<button class="legal-btn" id="openLegal">
+Правовая информация
+</button>
 
 </div>
 
@@ -602,11 +605,48 @@ vesmas01@yandex.ru
 
 </footer>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <script src="js/main.js"></script>
+
+
+<!-- =========================
+     LEGAL MODAL
+========================= -->
+
+<div class="modal" id="legalModal">
+
+    <div class="modal__overlay"></div>
+
+    <div class="modal__content">
+
+        <div class="modal__header">
+            <h3>Правовая информация</h3>
+            <button class="modal__close" id="closeLegal">✕</button>
+        </div>
+
+        <div class="modal__body">
+
+            <a href="https://pericentr.gosuslugi.ru/netcat_files/32/133/Postanovlenie_ot_ot_11_maya_2023_g._N_736.pdf"
+               target="_blank" rel="noopener">
+                📄 Постановление Правительства РФ №736 (11.05.2023)
+            </a>
+
+            <a href="https://arh-gvv.gosuslugi.ru/netcat_files/8/9/Federal_nyy_zakon_ot_21_11_2011_N_323_FZ_red_ot_28_12_2024.pdf"
+               target="_blank" rel="noopener">
+                📄 Федеральный закон №323-ФЗ «Об основах охраны здоровья»
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 </body>
 </html>
